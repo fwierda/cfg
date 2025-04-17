@@ -1,0 +1,97 @@
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+"Plugin 'gmarik/Vundle.vim'
+"Plugin 'vim-scripts/indentpython.vim'
+"Bundle 'Valloric/YouCompleteMe'
+"Plugin 'bitc/vim-bad-whitespace'
+"Plugin 'mhinz/vim-startify'
+" add all your plugins here (note older versions of Vundle
+" used Bundle instead of Plugin)
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+let python_highlight_all=1
+syntax on
+" Enable folding with the spacebar
+nnoremap <space> za
+" Show rules
+set ruler
+" Syntax highlighting
+syn off
+" Show line numbers
+set number
+" Add a guide to sort of kind of maintain 80 char width
+set colorcolumn=80
+" Use spaces for tabs
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+" Autoindent
+set autoindent
+" Highlight tabs
+set list
+set listchars=tab:>-
+" Highlight current line
+set cursorline
+" Add a custom command to write using sudo
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+" Enable indent guides
+let g:indent_guides_enable_on_vim_startup = 1
+" Configure statusbar
+set laststatus=2
+set noshowmode
+
+let g:vim_json_conceal=0
+
+" Configure indent guides
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+
+" Let backspace be backspace
+set backspace=indent,eol,start
+set t_Co=256
+colo desert
+let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
+let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
+let &t_EI = "\<esc>[1 q"  " default cursor (usually blinking block) otherwise
+
+call plug#begin()
+    Plug 'preservim/nerdtree'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'vim-syntastic/syntastic'
+    Plug 'nvie/vim-flake8'
+    Plug 'tmhedberg/SimpylFold'
+    Plug 'rust-lang/rust.vim'
+    Plug 'github/copilot.vim'
+    Plug 'gmarik/Vundle.vim'
+    Plug 'vim-scripts/indentpython.vim'
+    "Bundle 'Valloric/YouCompleteMe'
+    Plug 'bitc/vim-bad-whitespace'
+    Plug 'mhinz/vim-startify'
+call plug#end()
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+autocmd SessionLoadPost * NERDTree | wincmd =
+
+autocmd VimEnter *
+    \   if !argc()
+    \ |   Startify
+    \ |   NERDTree
+    \ |   wincmd w
+    \ | endif
+

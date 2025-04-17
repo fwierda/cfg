@@ -1,0 +1,36 @@
+[window]
+
+opacity = 0.9
+blur = true
+
+padding.x = 5
+padding.y = 5
+
+decorations = "Full"
+decorations_theme_variant = "Dark"
+startup_mode = "Maximized"
+
+[font]
+
+normal.family = "DejaVu Sans Mono for Powerline"
+bold.family = "DejaVu Sans Mono for Powerline"
+italic.family = "DejaVu Sans Mono for Powerline"
+bold_italic.family = "DejaVu Sans Mono for Powerline"
+
+size = 10.0
+
+[colors]
+primary.foreground = "#2cc55d"
+
+[terminal]
+shell.program = "/bin/zsh"
+shell.args = [
+    "-l",
+    "-c",
+    "tmux attach || tmux"
+    ]
+
+[keyboard]
+bindings = [
+   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
