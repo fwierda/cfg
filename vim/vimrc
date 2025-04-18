@@ -1,26 +1,6 @@
 set nocompatible              " required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-"Plugin 'gmarik/Vundle.vim'
-"Plugin 'vim-scripts/indentpython.vim'
-"Bundle 'Valloric/YouCompleteMe'
-"Plugin 'bitc/vim-bad-whitespace'
-"Plugin 'mhinz/vim-startify'
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
 let python_highlight_all=1
 syntax on
 " Enable folding with the spacebar
@@ -77,6 +57,7 @@ call plug#begin()
     "Bundle 'Valloric/YouCompleteMe'
     Plug 'bitc/vim-bad-whitespace'
     Plug 'mhinz/vim-startify'
+    Plug 'tribela/vim-transparent'
 call plug#end()
 
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -95,3 +76,4 @@ autocmd VimEnter *
     \ |   wincmd w
     \ | endif
 
+autocmd VimEnter * TransparentEnable
