@@ -1,2 +1,3 @@
 *.swp
-
+/k9s/clusters/*
+/k9s/*.log
