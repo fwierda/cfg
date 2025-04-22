@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:/Users/fwierda/cicd/find-my-namespace/:/opt/homebrew/bin
 
-alias k=/usr/bin/kubectl
+alias k=/opt/homebrew/bin/kubectl
 
 alias venv="source ./.venv/bin/activate"
 
