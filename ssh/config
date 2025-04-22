@@ -1,3 +1,6 @@
+Host *
+    SetEnv TERM=xterm-256color
+
 Host git-codecommit.eu-central-1.amazonaws.com
     User APKAU4GR5DDRLGW7LTHR
 
@@ -27,18 +30,3 @@ Host nasrenb
 Host solydus
     User solydusnl
     Hostname ftp.solydus.nl
-
-Host cka-control
-    User ubuntu
-    HostName 3.126.80.29
-    IdentityFile ~/.ssh/vector.pem
-
-Host cka-worker1
-    User ubuntu
-    HostName 3.73.104.12
-    IdentityFile ~/.ssh/vector.pem
-
-Host cka-worker2
-    User ubuntu
-    HostName 3.70.1.83
-    IdentityFile ~/.ssh/vector.pem
