@@ -117,6 +117,8 @@ alias venv="source ./.venv/bin/activate"
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
+[[ $commands[minikube] ]] && source <(minikube completion zsh)
+
 . "$HOME/.local/bin/env"
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
