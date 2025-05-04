@@ -27,7 +27,7 @@ shell.program = "/bin/zsh"
 shell.args = [
     "-l",
     "-c",
-    "tmux attach || tmux"
+    "tmux attach -t alacritty || tmux new -s alacritty"
     ]
 
 [keyboard]
