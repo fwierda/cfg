@@ -17,7 +17,7 @@ bold.family = "DejaVu Sans Mono for Powerline"
 italic.family = "DejaVu Sans Mono for Powerline"
 bold_italic.family = "DejaVu Sans Mono for Powerline"
 
-size = 9.0
+size = 11.0
 
 [colors]
 primary.foreground = "#2cc55d"
