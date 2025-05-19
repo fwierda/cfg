@@ -128,8 +128,8 @@ BULLETTRAIN_PROMPT_ORDER=(
   status
   context
   screen
-  dir
   virtualenv
+  dir
   aws
   go
   rust
