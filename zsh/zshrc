@@ -115,6 +115,8 @@ alias k=/usr/bin/kubectl
 
 alias venv="source ./.venv/bin/activate"
 
+alias uncmmit="git reset HEAD~1"
+
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 [[ $commands[minikube] ]] && source <(minikube completion zsh)
