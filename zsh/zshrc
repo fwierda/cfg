@@ -109,7 +109,9 @@ alias k=/opt/homebrew/bin/kubectl
 
 alias venv="source ./.venv/bin/activate"
 
-alias uncmmit="git reset HEAD~1"
+alias uncommit="git reset HEAD~1"
+
+alias kssc="ps aux | grep -i 'self service' | grep -v grep | awk '{print \$2}' | xargs kill"
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
