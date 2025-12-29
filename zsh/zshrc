@@ -103,11 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-<<<<<<< Updated upstream
 export PATH=$PATH:/snap/bin:/opt/pycharm-ce/bin:/home/feike/Projects/scripts:/opt/rustrover/bin
-=======
-export PATH=$PATH:~/cicd/find-my-namespace/:/opt/homebrew/bin:~/go/bin
->>>>>>> Stashed changes
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
