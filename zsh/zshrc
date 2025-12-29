@@ -113,6 +113,8 @@ alias uncommit="git reset HEAD~1"
 
 alias kssc="ps aux | grep -i 'self service' | grep -v grep | awk '{print \$2}' | xargs kill"
 
+alias kc="kubectx"
+
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 [[ $commands[minikube] ]] && source <(minikube completion zsh)
