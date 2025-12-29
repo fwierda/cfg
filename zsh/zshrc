@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=$PATH:/Users/fwierda/cicd/find-my-namespace/:/opt/homebrew/bin
+export PATH=$PATH:~/cicd/find-my-namespace/:/opt/homebrew/bin:~/go/bin
 
 alias k=/opt/homebrew/bin/kubectl
 
@@ -133,6 +133,10 @@ BULLETTRAIN_PROMPT_ORDER=(
   rust
   git
 )
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/f.w.wierda/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 BULLETTRAIN_STATUS_EXIT_SHOW=true
 BULLETTRAIN_EXEC_TIME_ELAPSED=10
