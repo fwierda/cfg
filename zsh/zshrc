@@ -103,7 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+<<<<<<< Updated upstream
 export PATH=$PATH:/snap/bin:/opt/pycharm-ce/bin:/home/feike/Projects/scripts:/opt/rustrover/bin
+=======
+export PATH=$PATH:~/cicd/find-my-namespace/:/opt/homebrew/bin:~/go/bin
+>>>>>>> Stashed changes
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -136,8 +140,12 @@ BULLETTRAIN_PROMPT_ORDER=(
   git
 )
 
-BULLETTRAIN_STATUS_EXIT_SHOW=true
-BULLETTRAIN_EXEC_TIME_ELAPSED=10
-BULLETTRAIN_GIT_COLORIZE_DIRTY=true
-BULLETTRAIN_VIRTUALENV_FG=black
-BULLETTRAIN_DIR_FG=black
+    BULLETTRAIN_STATUS_EXIT_SHOW=true
+    BULLETTRAIN_EXEC_TIME_ELAPSED=10
+    BULLETTRAIN_GIT_COLORIZE_DIRTY=true
+    BULLETTRAIN_VIRTUALENV_FG=black
+    BULLETTRAIN_DIR_FG=black
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/f.w.wierda/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
