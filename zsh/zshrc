@@ -121,6 +121,10 @@ alias kssc="ps aux | grep -i 'self service' | grep -v grep | awk '{print \$2}' |
 
 alias kc="kubectx"
 
+alias glogin="gcloud auth application-default login"
+
+alias kpw="op read op://Personal/bjpkmlpn5mtmk4hlporfp6bl6a/password | clipcopy"
+
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 [[ $commands[minikube] ]] && source <(minikube completion zsh)
@@ -151,3 +155,11 @@ BULLETTRAIN_EXEC_TIME_ELAPSED=10
 BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 BULLETTRAIN_VIRTUALENV_FG=black
 BULLETTRAIN_DIR_FG=black
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/fwierda/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
