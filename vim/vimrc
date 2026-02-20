@@ -54,10 +54,10 @@ call plug#begin()
     Plug 'github/copilot.vim'
     Plug 'gmarik/Vundle.vim'
     Plug 'vim-scripts/indentpython.vim'
-    "Bundle 'Valloric/YouCompleteMe'
     Plug 'bitc/vim-bad-whitespace'
     Plug 'mhinz/vim-startify'
     Plug 'tribela/vim-transparent'
+    Plug 'tpope/vim-fugitive'
 call plug#end()
 
 nnoremap <leader>n :NERDTreeFocus<CR>

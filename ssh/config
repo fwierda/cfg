@@ -30,3 +30,11 @@ Host nasrenb
 Host solydus
     User solydusnl
     Hostname ftp.solydus.nl
+
+Host git-codecommit.*.amazonaws.com
+    User APKAU4GR5DDREYU5YE6E
+    IdentityFile ~/.ssh/id_rsa
+
+Host gitlab.bol.io gitlab.stg.bol.io
+    User git
+    IdentityFile ~/.ssh/id_ed25519_20250910
