@@ -163,3 +163,6 @@ export NVM_DIR="$HOME/.nvm"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/fwierda/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Added by Antigravity
+export PATH="/Users/f.w.wierda/.antigravity/antigravity/bin:$PATH"
